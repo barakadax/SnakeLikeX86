@@ -1,4 +1,3 @@
-;by: Barakadax
 dseg segment
     monitor DD 0B8000000H
     something DB 219, 63  
@@ -22,7 +21,7 @@ start:
 	L0: 
 		mov cl, 80
 	L1:
-		mov word ptr [si], ax   ;white on screnn
+		mov word ptr [si], ax   ;white on screen
 		add si, 2
 		dec cl
 	jnz L1
@@ -31,8 +30,8 @@ start:
     ;-----------------------------
     mov ax, 0
     mov bp, 'r'
-    mov si, 1760    ;start middle row
-    mov bx, 80      ;start middle coloumn
+    mov si, 1760    ;start in middle row
+    mov bx, 80      ;start in middle coloumn
 	L2:
         mov ah, 0bh
         int 21h
